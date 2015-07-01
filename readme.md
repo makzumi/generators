@@ -1,4 +1,4 @@
-**Laravel Generators - Repositories and Services Providers**
+**Laravel Repository and Service Provider Generators**
 --
 
 This command line package help you create repositories and service providers, so you don't have to create files and folders by hand.

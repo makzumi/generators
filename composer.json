@@ -1,6 +1,6 @@
 {
     "name": "makzumi/generators",
-    "description": "Laravel Generator - Repositories and Service Providers",
+    "description": "Laravel Repository - Service Providers - Generators",
     "authors": [
         {
             "name": "Ammar Almakzumi",
