@@ -11,7 +11,7 @@ So, if you wanted to create a repository, you would call:
 
     php artisan makzumi:service
 
-And just answer the questions the commands ask.
+And just answer the few questions the command asks.
 
 *repo* Will generate an interface file and an implementation with proper namespacing and folder structure.
 
