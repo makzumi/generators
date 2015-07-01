@@ -19,7 +19,7 @@ And just answer the questions the commands ask.
 
 After creation, read the generated **README.MD** to finish configuration in a couple steps.
 
-** Installation **
+**Installation**
 
 		composer require makzumi/generators dev-master
 		
