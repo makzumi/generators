@@ -25,3 +25,5 @@ After creation, read the generated **README.MD** to finish configuration in a co
 		
 
 After that is done, add the following to the *providers* array in **config/app.php**
+
+		'Makzumi\Generators\GeneratorsServiceProvider'
