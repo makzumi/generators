@@ -1,0 +1,7 @@
+<?php {{NAMESPACE}};
+
+class Db{{BASE}}Repository implements {{BASE}}RepositoryInterface {
+
+	/*** METHODS ***/
+
+}

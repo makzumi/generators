@@ -1,0 +1,11 @@
+<?php namespace {{NAMESPACE}}\{{BASE}}\Facades;
+
+use Illuminate\Support\Facades\Facade;
+
+class {{BASE}}Facade extends Facade {
+
+	protected static function getFacadeAccessor () {
+		return '{{BASE_LC}}';
+	}
+
+}

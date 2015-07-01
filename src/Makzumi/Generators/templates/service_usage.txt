@@ -1,0 +1,49 @@
+
+makzumi - Service Provider Generator (README.MD)
+--------------------
+To be able to use the generated service provider you need to do these manually:
+ 
+In **composer.json,** add your namespace to *psr-4:*
+
+	...
+	"autoload": {
+		"classmap": [
+	    		....
+		],
+		"psr-4" :{
+			"Acme\\" : "App/Acme"
+		}		
+	},
+	...
+
+And the new service provider to the *providers* array in **app/config/app.php**:
+
+	'providers' => array(
+		...
+		'Acme\Services\MyService\MyServiceServiceProvider',
+		...
+	);
+		
+Add an alias for ease of use, add the following to **app/config/app.php**:
+	
+	'aliases' => array(
+		...
+		'MyService' => 'Acme\Services\MyService\Facades\MyServiceFacade',
+		...
+	);
+
+Example Usage:
+
+	<?php 
+	
+	class AcmeController extends \BaseController {
+		
+		public function index(){
+			//CALL METHOD
+			return MyService::method();
+		}		
+		
+		...
+		
+	}
+

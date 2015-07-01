@@ -1,0 +1,44 @@
+
+makzumi - Repository Generator (README.MD)
+--------------------
+To be able to use the generated repository you need to do these manually:
+ 
+In **composer.json,** add your namespace to *psr-4:*
+
+	...
+	"autoload": {
+		"classmap": [
+	    		....
+		],
+		"psr-4" :{
+			"Acme\\" : "App/Acme"
+		}		
+	},
+	...
+
+And then bind the interface to the repository, you can this add to **routes.php** or **global.php**:
+
+	App::bind('{{NAMESPACE}}\MyRepositoryInterface', '{{NAMESPACE}}\DbMyRepository');
+
+Example Usage:
+
+	<?php 
+	
+	use {{NAMESPACE}}\MyRepositoryInterface;
+	
+	class AcmeController extends \BaseController {
+		
+		protected $myRepo;
+	
+		public function __construct(MyRepositoryInterface $myRepo){
+			$this->myRepo = $myRepo;
+		}
+		
+		public function index(){
+			//CALL METHODS
+			$this->myRepo->method();
+		}		
+		
+		...
+		
+	}

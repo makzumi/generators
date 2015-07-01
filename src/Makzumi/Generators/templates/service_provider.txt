@@ -1,0 +1,12 @@
+<?php namespace {{NAMESPACE}}\{{BASE}};
+
+use Illuminate\Support\ServiceProvider;
+
+class {{BASE}}ServiceProvider extends ServiceProvider {
+
+	public function register () {
+
+		$this->app->bind('{{BASE_LC}}', '{{NAMESPACE}}\{{BASE}}\{{BASE}}');
+
+	}
+}
