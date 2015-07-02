@@ -20,6 +20,8 @@ And then bind the interface to the repository, you can this add to **routes.php*
 
 	App::bind('{{NAMESPACE}}\MyRepositoryInterface', '{{NAMESPACE}}\DbMyRepository');
 
+Run a **composer dump-autoload** after setting it up.
+
 Example Usage:
 
 	<?php 

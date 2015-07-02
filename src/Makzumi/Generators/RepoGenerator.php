@@ -26,8 +26,10 @@ class RepoGenerator {
 		$this->file->put($path.'/'.$base.'RepositoryInterface.php', $template);
 
 		//IMPLEMENTATION
+		$db = $path.'/Db';
+		if(!$this->file->exists($db))$this->file->makeDirectory($db, 511, true);
 		$template = $this->getRepoImplementationTemplate($base, $ns);
-		$this->file->put($path.'/Db'.$base.'Repository.php', $template);
+		$this->file->put($db.'/Db'.$base.'Repository.php', $template);
 
 		//USAGE
 		$template = $this->getMD($base, $ns);
