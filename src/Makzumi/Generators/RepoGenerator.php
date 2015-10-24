@@ -48,6 +48,7 @@ class RepoGenerator {
 	}
 
 	private function getRepoImplementationTemplate($base, $namespace = false){
+		$base = str_replace('\\', '', $base);
 		$ri = $this->file->get(__DIR__.'/templates/repo_implementation.txt');
 		$data = str_replace('{{BASE}}', $base, $ri);
 
