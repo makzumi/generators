@@ -49,10 +49,11 @@ class RepoGenerator {
 
 	private function getRepoImplementationTemplate($base, $namespace = false){
 		$base = str_replace('\\', '', $base);
-		$ri = $this->file->get(__DIR__.'/templates/repo_implementation.txt');
+		$file = $namespace ? 'repo_implementation.txt' : 'repo_implementation_no.txt';
+		$ri = $this->file->get(__DIR__.'/templates/'.$file);
 		$data = str_replace('{{BASE}}', $base, $ri);
 
-		$ns = $namespace ? 'namespace ' . $namespace : '';
+		$ns = $namespace ? $namespace : '';
 		$data = str_replace('{{NAMESPACE}}', $ns, $data);
 
 		return $data;
