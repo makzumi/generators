@@ -1,4 +1,6 @@
-<?php {{NAMESPACE}};
+<?php {{NAMESPACE}}\Db;
+
+use {{NAMESPACE}}\{{BASE}}RepositoryInterface;
 
 class Db{{BASE}}Repository implements {{BASE}}RepositoryInterface {
 
