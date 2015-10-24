@@ -50,8 +50,13 @@ class RepoGenerator {
 	private function getRepoImplementationTemplate($base, $namespace = false){
 		$ri = $this->file->get(__DIR__.'/templates/repo_implementation.txt');
 		$data = str_replace('{{BASE}}', $base, $ri);
+
+		$use = $namespace.'\\'.$base.'\\';
+		$data = str_replace('{{IMPORT}}', $use, $data);
+
 		$ns = $namespace ? 'namespace ' . $namespace : '';
 		$data = str_replace('{{NAMESPACE}}', $ns, $data);
+
 		return $data;
 	}
 
